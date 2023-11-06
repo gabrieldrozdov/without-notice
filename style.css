@@ -330,9 +330,9 @@ body[data-outlines='true'] {
 	display: flex;
 	flex-direction: column;
 	left: 0;
-	overflow-y: scroll;
 	background-color: var(--primary);
 	color: var(--secondary);
+	max-width: 100%;
 	z-index: 9;
 }
 .specimen-tester-select-options[data-active="0"] {
@@ -342,6 +342,8 @@ body[data-outlines='true'] {
 	cursor: pointer;
 	padding: 2px 10px;
 	transition: opacity .2s;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .specimen-tester-select-option:hover {
 	opacity: .5;
@@ -646,6 +648,9 @@ body[data-outlines='true'] {
 	opacity: .25;
 }
 @media only screen and (max-width: 1200px) {
+	.specimen-glyphs-letterset {
+		padding-top: unset;
+	}
 	.specimen-glyphs-detail-info {
 		grid-template-columns: repeat(2, 1fr);
 	}
