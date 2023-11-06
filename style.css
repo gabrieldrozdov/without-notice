@@ -9,19 +9,20 @@
 	font-style: italic;
 }
 @font-face {
-	font-family: 'Material Symbols Outline';
-	src: url('assets/fonts/MaterialSymbolsOutlined[FILL\,GRAD\,opsz\,wght].ttf');
-	font-style: italic;
+	font-family: 'Material Symbols Outlined';
+	src: url('assets/fonts/MaterialSymbolsOutlined.ttf');
 }
 html {
 	scroll-behavior: smooth;
 	--color1: #182D48;
 	--color2: #E2E2E2;
+	text-rendering: optimizeLegibility;
 }
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
 }
 button {
 	border: unset;
@@ -51,7 +52,7 @@ body[data-outlines='true'] {
 	--border: .5px solid var(--primary);
 }
 .symbol {
-	font-family: 'Material Symbols Outline';
+	font-family: 'Material Symbols Outlined';
 	font-feature-settings: 'cv01' on, 'cv10' on;
 	font-size: 1.2em;
 	line-height: 0;
