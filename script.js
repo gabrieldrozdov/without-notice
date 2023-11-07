@@ -177,13 +177,13 @@ function generateTesters() {
 
 	// Update size on input
 	for (let slider of testerContainer.querySelectorAll('.specimen-tester-slider[data-type="fontsize"]')) {
-		slider.addEventListener('input', () => {fontsizevalue.value = parseFloat(fontsize.value).toFixed(1)});
+		slider.addEventListener('input', () => {slider.querySelector('output').value = parseFloat(slider.querySelector('input').value).toFixed(1)});
 	}
 	for (let slider of testerContainer.querySelectorAll('.specimen-tester-slider[data-type="leading"]')) {
-		slider.addEventListener('input', () => {leadingvalue.value = parseFloat(leading.value).toFixed(2)});
+		slider.addEventListener('input', () => {slider.querySelector('output').value = parseFloat(slider.querySelector('input').value).toFixed(2)});
 	}
 	for (let slider of testerContainer.querySelectorAll('.specimen-tester-slider[data-type="tracking"]')) {
-		slider.addEventListener('input', () => {trackingvalue.value = parseFloat(tracking.value).toFixed(2)});
+		slider.addEventListener('input', () => {slider.querySelector('output').value = parseFloat(slider.querySelector('input').value).toFixed(2)});
 	}
 	for (let tester of document.querySelectorAll('.specimen-tester-editable')) {
 		setTimeout(() => {
